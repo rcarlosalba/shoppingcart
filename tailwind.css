@@ -1,29 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.submenu:hover .carrito {
-  position: inherit;
-  display: block;
-  transition: 0.7s ease;
-  right: 5%;
-}
-.hero {
-  background-image: url("./img/bgMain.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 350px;
-  margin-top: 8px;
-}
-.borrar-curso {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: red;
-  color: white;
-  font-size: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
