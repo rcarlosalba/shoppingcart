@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Shopping Cart</title>
+  </head>
+  <body>
+    <!-- header  -->
+    <header class="bg-white">
+      <div class="flex justify-between items-center bg-white">
+        <div class="logo flex items-end mt-5 ml-5">
+          <p class="text-4xl text-red-600 font-bold">U</p>
+          <p class="text-xl font-bold">Universidad</p>
+        </div>
+        <div class="contenedor-carrito">
+          <ul>
+            <li class="submenu absolute right-9 top-5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-shopping-cart cursor-pointer"
+                width="44"
+                height="44"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#000000"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <circle cx="6" cy="19" r="2" />
+                <circle cx="17" cy="19" r="2" />
+                <path d="M17 17h-11v-14h-2" />
+                <path d="M6 5l14 1l-1 7h-13" />
+              </svg>
+              <!-- carrito -->
+              <div class="carrito hidden bg-white rounded-b-md" id="carrito">
+                <table
+                  class="lista-carrito text-center border-separate border-spacing-2 min-h-fit"
+                  id="lista-carrito"
+                >
+                  <thead>
+                    <th>Imagen:</th>
+                    <th>Nombre:</th>
+                    <th>Precio:</th>
+                    <th>Cantidad:</th>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+                <a
+                  href="#"
+                  id="vaciar-carrito"
+                  class="w-32 mx-auto mb-2 py-2 block font-bold text-white rounded-md text-center bg-red-500 hover:bg-red-600"
+                  >Vaciar Carrito</a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- hero -->
+    <div class="hero flex justify-start items-center">
+      <div class="text-hero space-y-3 text-white md:ml-7">
+        <h3 class="font-bold text-3xl">Aprende algo nuevo</h3>
+        <h5 class="text-xl">Todos los cursos a $12USD</h5>
+        <input
+          type="text"
+          placeholder="¿Qué quieres aprender?"
+          class="py-2 rounded-md px-2"
+        />
+      </div>
+    </div>
+    <!-- color bar -->
+    <div
+      class="colorbar grid grid-flow-row space-y-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-auto py-3 text-white md:h-28 md:grid-flow-col md:grid-cols-3 md:space-y-0"
+    >
+      <div class="description flex mt-0 items-center md:mx-2">
+        <div class="img mr-3">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-clock"
+            width="44"
+            height="44"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#ffffff"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <circle cx="12" cy="12" r="9" />
+            <polyline points="12 7 12 12 15 15" />
+          </svg>
+        </div>
+        <div class="text text-sm">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </div>
+      </div>
+      <div class="description flex mt-0 items-center md:mx-2">
+        <div class="img mr-3">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-viewfinder"
+            width="44"
+            height="44"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#ffffff"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <circle cx="12" cy="12" r="9" />
+            <line x1="12" y1="3" x2="12" y2="7" />
+            <line x1="12" y1="21" x2="12" y2="18" />
+            <line x1="3" y1="12" x2="7" y2="12" />
+            <line x1="21" y1="12" x2="18" y2="12" />
+            <line x1="12" y1="12" x2="12" y2="12.01" />
+          </svg>
+        </div>
+        <div class="text text-sm">
+          Quod aspernatur ut eveniet est laudantium molestiae.
+        </div>
+      </div>
+      <div class="description flex mt-0 items-center md:mx-2">
+        <div class="img mr-3">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-bulb"
+            width="44"
+            height="44"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#ffffff"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7" />
+            <path
+              d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3"
+            />
+            <line x1="9.7" y1="17" x2="14.3" y2="17" />
+          </svg>
+        </div>
+        <div class="text text-sm">
+          Quibusdam, debitis consequatur aliquid dolore.
+        </div>
+      </div>
+    </div>
+    <!-- title -->
+    <div class="main-title text-center font-semibold text-6xl my-4">
+      Cursos en línea
+    </div>
+    <!-- card container -->
+    <div
+      id="lista-cursos"
+      class="lista-cursos mx-3 grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+    >
+      <!-- card -->
+      <div class="card rounded-md mx-auto">
+        <div class="card-img-container">
+          <img
+            src="./img/aprendizajeEfectivo.jpg"
+            alt=""
+            class="rounded-t-md card-img"
+          />
+        </div>
+        <div
+          class="card-text-description bg-gray-200 p-3 rounded-b-md space-y-3"
+        >
+          <h3 class="font-bold">Estrategias de Aprendizaje Efectivas</h3>
+          <h5>Por: Carlos Alba</h5>
+          <div class="card-price-container flex justify-between">
+            <p>$ 99.00 USD</p>
+            <span>$ 12.00 USD</span>
+          </div>
+          <a
+            href="#"
+            data-id="1"
+            class="agregar-carrito text-white block font-bold text-center bg-blue-400 rounded-md py-2 hover:bg-blue-600"
+            >Agregar al carrito</a
+          >
+        </div>
+      </div>
+      <!-- card -->
+      <div class="card rounded-md mx-auto">
+        <div class="card-img-container">
+          <img src="./img/comunicacionPareja.jpg" alt="" class="rounded-t-md" />
+        </div>
+        <div
+          class="card-text-description bg-gray-200 p-3 rounded-b-md space-y-3"
+        >
+          <h3 class="font-bold">Comunicación Efectiva en la Pareja</h3>
+          <h5>Por: Carlos Alba</h5>
+          <div class="card-price-container flex justify-between">
+            <p>$ 99.00 USD</p>
+            <span>$ 12.00 USD</span>
+          </div>
+          <a
+            href="#"
+            data-id="2"
+            class="agregar-carrito text-white block font-bold text-center bg-blue-400 rounded-md py-2 hover:bg-blue-600"
+            >Agregar al carrito</a
+          >
+        </div>
+      </div>
+      <!-- card -->
+      <div class="card rounded-md mx-auto">
+        <div class="card-img-container">
+          <img src="./img/finanzasPersonales.jpg" alt="" class="rounded-t-md" />
+        </div>
+        <div
+          class="card-text-description bg-gray-200 p-3 rounded-b-md space-y-3"
+        >
+          <h3 class="font-bold">Administración de Finanzas Personales</h3>
+          <h5>Por: Carlos Alba</h5>
+          <div class="card-price-container flex justify-between">
+            <p>$ 99.00 USD</p>
+            <span>$ 12.00 USD</span>
+          </div>
+          <a
+            href="#"
+            data-id="3"
+            class="agregar-carrito text-white block font-bold text-center bg-blue-400 rounded-md py-2 hover:bg-blue-600"
+            >Agregar al carrito</a
+          >
+        </div>
+      </div>
+      <!-- card -->
+      <div class="card rounded-md mx-auto">
+        <div class="card-img-container">
+          <img src="./img/incredibleYear.jpg" alt="" class="rounded-t-md" />
+        </div>
+        <div
+          class="card-text-description bg-gray-200 p-3 rounded-b-md space-y-3"
+        >
+          <h3 class="font-bold">El mejor año de tu vida</h3>
+          <h5>Por: Carlos Alba</h5>
+          <div class="card-price-container flex justify-between">
+            <p>$ 99.00 USD</p>
+            <span>$ 12.00 USD</span>
+          </div>
+          <a
+            href="#"
+            data-id="4"
+            class="agregar-carrito text-white block font-bold text-center bg-blue-400 rounded-md py-2 hover:bg-blue-600"
+            >Agregar al carrito</a
+          >
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
