@@ -8,6 +8,179 @@
     <title>Shopping Cart</title>
   </head>
   <body>
+    <!-- header -->
+    <div class="header-container">
+      <header class="header">
+        <div class="submenu fixed top-0 w-full flex justify-between bg-white">
+          <div class="logo ml-6 flex items-end">
+            <p class="text-red-600 text-5xl font-bold">U</p>
+            <p class="text-2xl">Universidad</p>
+          </div>
+          <div class="carrito-container mr-6">
+            <div class="carrito" id="carrito">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-shopping-cart cursor-pointer"
+                width="44"
+                height="44"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#000000"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <circle cx="6" cy="19" r="2" />
+                <circle cx="17" cy="19" r="2" />
+                <path d="M17 17h-11v-14h-2" />
+                <path d="M6 5l14 1l-1 7h-13" />
+              </svg>
+              <div class="carrito-listado bg-white hidden rounded-md" id="carrito-listado">
+                <table
+                  class="border-separate border-spacing-2 text-center"
+                >
+                  <thead>
+                    <tr>
+                      <th>Imagen</th>
+                      <th>Título</th>
+                      <th>Precio</th>
+                      <th>Cantidad</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+                <a href="" class="block bottom-0 text-center font-bold py-2 text-white rounded-md bg-red-500 hover:bg-red-600"
+                id="vaciar-carrito">Vaciar carrito</a>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+    <!-- separationbar -->
+    <div class="w-full h-4 py-6"></div>
+    <!-- hero -->
+    <div class="hero flex items-center">
+      <div class="hero-description flex flex-col text-white space-y-3 md:ml-10">
+        <h2 class="text-4xl font-bold">Aprende algo nuevo</h2>
+        <h4 class="text-xl">Todos los curos a <span class="font-bold">$ 12.00 USD</span></h4>
+        <input type="text" placeholder="¿Qué quieres aprender? " class="input-curso rounded-md p-2">
+      </div>
+    </div>
+    <!-- color-bar -->
+    <div class="color-bar bg-gradient-to-r from-violet-500 to-fuchsia-500 h-20" id="color-bar">
+      <div class="grid grid-cols-1 h-full place-items-center text-white md:grid-cols-3">
+        <div class="text-description flex items-center">
+          <div class="logo mr-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-viewfinder" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <circle cx="12" cy="12" r="9" />
+              <line x1="12" y1="3" x2="12" y2="7" />
+              <line x1="12" y1="21" x2="12" y2="18" />
+              <line x1="3" y1="12" x2="7" y2="12" />
+              <line x1="21" y1="12" x2="18" y2="12" />
+              <line x1="12" y1="12" x2="12" y2="12.01" />
+            </svg>
+          </div>
+          <div class="text">Alcanza tus metas</div>
+        </div>
+        <div class="text-description flex items-center">
+          <div class="logo mr-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bulb" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7" />
+            <path d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3" />
+            <line x1="9.7" y1="17" x2="14.3" y2="17" />
+          </svg>
+          </div>
+          <div class="text">Inspirate</div>
+        </div>
+        <div class="text-description flex items-center">
+          <div class="logo mr-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <circle cx="12" cy="12" r="9" />
+              <polyline points="12 7 12 12 15 15" />
+            </svg>
+          </div>
+          <div class="text">En tu mejor horario</div>
+        </div>
+      </div>
+    </div>
+    <!-- separationbar -->
+    <div class="w-full h-4 py-6"></div>
+    <!-- big-title -->
+    <div class="text-4xl font-semibold text-center my-4">
+      Cursos en línea
+    </div>
+    <!-- card-container -->
+    <div class="lista-cursos grid place-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-4" 
+    id="lista-cursos">
+      <div class="card h-60 m-2">
+        <img src="./img/comunicacionPareja.jpg" alt="" class="object-cover w-full h-48">
+        <div class="course-description space-y-3">
+          <h3 class="font-bold text-xl">Comunicación en la pareja</h3>
+          <p class="font-semibold">Por: Carlos Alba</p>
+          <div class="calificaciion">
+            <img src="./img/estrellas.png" alt="">
+          </div>
+          <div class="price-container flex justify-between">
+            <p class="line-through">USD $199.00</p>
+            <span class="font-bold text-xl">USD $12.00</span>
+          </div>
+          <a href="#" data-id="1" class="agregar-carrito block rounded-md py-2 text-center font-bold text-white bg-blue-500 hover:bg-blue-600"> Agregar al Carrito </a>
+        </div>
+      </div>
+      <div class="card h-60 m-2">
+        <img src="./img/aprendizajeEfectivo.jpg" alt="" class="object-cover w-full h-48">
+        <div class="course-description space-y-3">
+          <h3 class="font-bold text-xl">Aprendizaje Efectivo</h3>
+          <p class="font-semibold">Por: Carlos Alba</p>
+          <div class="calificaciion">
+            <img src="./img/estrellas.png" alt="">
+          </div>
+          <div class="price-container flex justify-between">
+            <p class="line-through">USD $199.00</p>
+            <span class="font-bold text-xl">USD $12.00</span>
+          </div>
+          <a href="#" data-id="2" class="agregar-carrito block rounded-md py-2 text-center font-bold text-white bg-blue-500 hover:bg-blue-600"> Agregar al Carrito </a>
+        </div>
+      </div>
+      <div class="card h-60 m-2">
+        <img src="./img/finanzasPersonales.jpg" alt="" class="object-cover w-full h-48">
+        <div class="course-description space-y-3">
+          <h3 class="font-bold text-xl">Finanzas Personales</h3>
+          <p class="font-semibold">Por: Carlos Alba</p>
+          <div class="calificaciion">
+            <img src="./img/estrellas.png" alt="">
+          </div>
+          <div class="price-container flex justify-between">
+            <p class="line-through">USD $199.00</p>
+            <span class="font-bold text-xl">USD $12.00</span>
+          </div>
+          <a href="#" data-id="3" class="agregar-carrito block rounded-md py-2 text-center font-bold text-white bg-blue-500 hover:bg-blue-600"> Agregar al Carrito </a>
+        </div>
+      </div>
+      <div class="card h-60 m-2">
+        <img src="./img/incredibleYear.jpg" alt="" class="object-cover w-full h-48">
+        <div class="course-description space-y-3">
+          <h3 class="font-bold text-xl">Crear el mejor año</h3>
+          <p class="font-semibold">Por: Carlos Alba</p>
+          <div class="calificaciion">
+            <img src="./img/estrellas.png" alt="">
+          </div>
+          <div class="price-container flex justify-between">
+            <p class="line-through">USD $199.00</p>
+            <span class="font-bold text-xl">USD $12.00</span>
+          </div>
+          <a href="#" data-id="4" class="agregar-carrito block rounded-md py-2 text-center font-bold text-white bg-blue-500 hover:bg-blue-600"> Agregar al Carrito </a>
+        </div>
+      </div>
+    </div>
+    <!-- separationbar -->
+    <div class="w-full h-40 py-6"></div>
     <script src="./app.js"></script>
   </body>
 </html>

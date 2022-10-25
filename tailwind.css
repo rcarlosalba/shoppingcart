@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.carrito:hover .carrito-listado {
+  position: absolute;
+  right: 3%;
+  display: block;
+  transition: 0.7s ease-in;
+}
+
+.carrito table {
+  min-height: 250px;
+}
+
+.hero {
+  height: 350px;
+  background-image: url("./img/bgMain.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.borrar-curso {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  color: white;
+}
